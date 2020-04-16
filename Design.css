@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14 Apr, 2020, 8:27:47 PM
+    Author     : Priyaranjan
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.loader_bg{
+    position: fixed;
+    x-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.loader{
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: calc(47vh - 75px);
+    left: calc(47vw - 75px);
+}
+
+.loader:before, .loader:after{
+    content: '';
+    border: 1em solid #ff5733;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#contener{
+    width: 960px;
+    margin: 0px auto;
+}
+
+table{
+    background-color: black;
+    color: white;
+}
+
+table#t1{
+    width: 100%;
+    height: 70%;
+    background-clip: #f1f1c1;
+}
+
+table th tr{
+    border-bottom:  1px solid #ddd;
+    border-collapse: collapse;
+}
+
+table#t1 tr:nth-child(even){
+    text-align: center;
+    height: 30px;
+    background-color: #333333;
+}
+
+table#t1 tr:nth-child(odd){
+    text-align: center;
+    height: 30px;
+    background-color: #3d453f;
+}
+
+table#t1 th {
+    height: 40px;
+    background-color: blue;
+    color: white;
+}
+
+
+@media screen and (max-width:959px){
+    #contener{
+        width: 100%;
+    }
+}
