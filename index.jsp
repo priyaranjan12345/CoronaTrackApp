@@ -49,6 +49,7 @@
             </thead>
             <tbody>
                  <%
+                 // download the jsoup jarfile then import it to your project
                     String url = "https://www.mohfw.gov.in/";
                     int af[] = new int[33];
                     int re[] = new int[33];
